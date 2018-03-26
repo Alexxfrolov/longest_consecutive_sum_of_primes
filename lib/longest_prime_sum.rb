@@ -4,15 +4,12 @@ class LongestPrimeSum
   Result = Struct.new(:length, :sum)
 
   def initialize(primes)
-    # you should pass builder to build
+    # you should pass array of primes as input
     @primes = primes
     @primes_sum = primes_sum.unshift(0)
-    @sequence = []
   end
 
   def call
-    # @primes.reverse.map { |prime| max_sequence(prime) }.max
-
     Result.new(*greatest_sum)
   end
 
